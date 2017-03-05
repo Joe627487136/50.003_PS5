@@ -1,0 +1,1 @@
+StringBuffers are thread-safe, meaning that they have synchronized methods to control access so that only one thread can access a StringBuffer object's synchronized code at a time. Thus, StringBuffer objects are generally safe to use in a multi-threaded environment where multiple threads may be trying to access the same StringBuffer object at the same time.
