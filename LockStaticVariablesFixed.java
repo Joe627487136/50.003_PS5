@@ -29,7 +29,7 @@ class WD2 extends Thread {
     public void run () {
         if (LockStaticVariablesFixed.saving >= 1000) {
             System.out.println("I am doing something.");
-            synchronized (LockStaticVariables.class){
+            synchronized (LockStaticVariablesFixed.class){
                 LockStaticVariablesFixed.saving = LockStaticVariablesFixed.saving - 1000;
                 LockStaticVariablesFixed.cash = LockStaticVariablesFixed.cash + 1000;
             }
