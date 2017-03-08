@@ -31,10 +31,14 @@ class MultiThreadSearch extends Thread{
     }
 
     public static void main(String args[]){
-
-        MultiThreadSearch t1=new MultiThreadSearch(1);
-        MultiThreadSearch t2=new MultiThreadSearch(2);
-        t1.start();
-        t2.start();
+        try {
+            MultiThreadSearch t1 = new MultiThreadSearch(1);
+            MultiThreadSearch t2 = new MultiThreadSearch(2);
+            t1.start();
+            t1.sleep(1000);
+            t2.start();
+        }catch (InterruptedException e){
+            System.out.println("t1 is interrupted");
+        }
     }
 }
